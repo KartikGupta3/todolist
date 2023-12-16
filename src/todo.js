@@ -15,20 +15,19 @@ export const TodoList = () => {
   };
   return (
     <div className="bg-[#2C2C2C] w-screen h-screen overflow-auto">
-      <div className="flex flex-col gap-32 p-8">
+      <div className="flex flex-col gap-32 p-2 md:p-4 lg:p-8">
         <div className="flex flex-col gap-4 items-center justify-center">
           <div class="flex flex-row gap-6 items-center">
-            <div class="border-solid border-light border-t-2 border-r-[0] border-b-[0] border-l-[0] shrink-0 w-[30px] h-0 "></div>
-            <div class="text-[#FFF] text-left font-serif text-5xl font-normal ">
+            <div class="border-solid border-light border-t-2 border-r-[0] border-b-[0] border-l-[0] shrink-0 h-0 w-[10px] md:w-[20px] lg:w-[30px]"></div>
+            <div class="text-[#FFF] text-left font-serif font-normal text-xl md:text-2xl lg:text-5xl">
               TO-DO NOW
             </div>
-            <div class="border-solid border-light border-t-2 border-r-[0] border-b-[0] border-l-[0] shrink-0 w-[30px] h-0 "></div>
+            <div class="border-solid border-light border-t-2 border-r-[0] border-b-[0] border-l-[0] shrink-0 h-0 w-[10px] md:w-[20px] lg:w-[30px]"></div>
           </div>
-          <div class="flex flex-row gap-8 items-center justify-start">
-            <div class="border-solid border-light border-t-2 border-r-[0] border-b-[0] border-l-[0] shrink-0 w-48 h-0 "></div>
+          <div class="flex flex-row items-center justify-start gap-4 md:ap-6 lg:gap-8">
+            <div class="border-solid border-light border-t-2 border-r-[0] border-b-[0] border-l-[0] shrink-0 h-0 w-24 md:w-40 lg:w-48"></div>
             <svg
-              class="shrink-0 w-8 h-8  overflow-visible"
-              width="33"
+              class="shrink-0 overflow-visible w-4 h-4 md:w-8 h-8"
               height="33"
               viewBox="0 0 33 33"
               fill="none"
@@ -56,13 +55,13 @@ export const TodoList = () => {
                 stroke-linejoin="round"
               />
             </svg>
-            <div class="border-solid border-light border-t-2 border-r-[0] border-b-[0] border-l-[0] shrink-0 w-48 h-0 "></div>
+            <div class="border-solid border-light border-t-2 border-r-[0] border-b-[0] border-l-[0] shrink-0 h-0 w-24 md:w-40 lg:w-48"></div>
           </div>
         </div>
-        <div className="flex flex-col gap-9 items-center justify-center">
+        <div className="flex flex-col items-center justify-center gap-3 md:gap-9 ">
           <div className="flex flex-row items-center pl-20">
             <input
-              className="bg-white w-[720px] h-[40px] rounded-full text-left p-4"
+              className="bg-white h-[40px] rounded-full text-left p-4 w-[270px] md:w-[480px] lg:w-[720px]"
               value={task}
               onChange={(e) => setTask(e.target.value)}
             ></input>
@@ -73,13 +72,13 @@ export const TodoList = () => {
               <div className="font-serif">Add Task</div>
             </button>
           </div>
-          <div class="border-solid border-[#ffffff] border-t border-r-[0] border-b-[0] border-l-[0] w-[850px] h-0 ml-8"></div>
-          <div className="p-24">
+          <div class="border-solid border-[#ffffff] border-t border-r-[0] border-b-[0] border-l-[0] h-0 ml-4 w-[95%] md:w-[60%]"></div>
+          <div className="p-8 md:p-16 lg:p-24">
             {list.length > 0 &&
               list.map((li) => (
                 <div className="flex flex-col p-2" key={li.id}>
                   <div className="flex flex-row items-center pl-8">
-                    <div className="bg-[#222222] w-[720px] h-[38px] rounded-lg text-white p-1.5">
+                    <div className="bg-[#222222] h-[38px] rounded-lg text-white p-1.5 w-[270px] md:w-[480px] lg:w-[720px]">
                       {li.task}
                     </div>
                     <button
